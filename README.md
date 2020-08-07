@@ -57,6 +57,9 @@ npx wdio wdio.conf.js theuser zappin3w mydomain.com
 (above are fictitious credentials or domain. Password would be masked in a real-life situation. Note only specify the domain and not 
 the full URL, and with no slashes.)
 
+NOTE:
+(I see the that URL, while passed though the CLI, is in the commit history and hard-coded on the browser.url call after the initial navigation 
+to the site. But the user id and password should still be secure and not in the commits.)
 
 For further reference setting up WebdriverIO see https://webdriver.io/docs/gettingstarted.html
 
