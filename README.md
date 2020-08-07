@@ -32,7 +32,7 @@ Run the following commands -
 
 npm init -y
 
-(install WebdriverIO CLI...)
+(install WebdriverIO CLI...) NOTE SET frameowrk to 'Mocha' if prompted
 
 npm i --save-dev @wdio/cli
 
@@ -41,10 +41,14 @@ npm i --save-dev @wdio/cli
 npx wdio config -y
 
 
+It is recommended to increase the timeout parameter below. To do this open wdio.conf.js and edit by searching for 'timeout'. Increase to 
+at least 180 seconds per timeout.
+
+
 To run the test project - 
 
 
-npx wdio wdio.conf.js <userid> <password> <url domain>
+npx wdio wdio.conf.js userid password url domain
 
 e.g.:
 
@@ -70,10 +74,12 @@ please call 07460 281547 or eamail robert.tomsett@btinternet.co
 
 Troubleshoot:
 
-If the test times out (it shouldn't as I've increased timeout args), please open wdio.conf.js and increase timeouts e.g.
+1. If the test times out (it shouldn't as I've increased timeout args), please open wdio.conf.js and increase timeouts e.g.
 
     mochaOpts: {
         ui: 'bdd',
         timeout: 150000
     },
 
+
+2. Ensure during installation that 'Mocha' was selected as the framework. If in doubt, reinstall.
